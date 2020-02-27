@@ -1,0 +1,109 @@
+/*Metodos de preconfiguracion*/
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "roboto";
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+@font-face{
+    font-family: "roboto";
+    src: url(/estilos/RobotoSlab-VariableFont_wght.ttf);
+}
+.logo{
+    width: 50px;
+}
+/*---------------header------------------------*/
+header{
+    width: 75em;
+    height: 31em;
+    color: red;
+    background-image: url(/imagenesImportantes/city.png);
+}
+.cabezera{
+    width: 100%;
+    height: 100%;
+    font-size: 1.8em;
+    color: rgb(240, 255, 255);
+    background-color: rgba(80, 74, 74, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.cabezera h1{
+    border: 1px solid rgb(240, 255, 255);
+    padding: .5em;
+}
+.cabezera button{
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(240, 255, 255);
+    padding: .5em;
+    background-color: transparent;
+    border: 1px solid rgb(240, 255, 255);
+}
+.cabezera button:hover{
+    color: black;
+    background-color: white;
+}
+/*-----------------------Navegacion---------------------*/
+nav{
+    width: 75em;
+    background-color: rgb(124, 191, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    margin: 0;
+}
+nav ul li{
+    display: inline-block;
+    font-weight: bold;
+}
+nav ul li a{
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+}
+nav ul  li a:visited{
+    color: azure;
+}
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/*----------------------Main-------------------------------*/
+main{
+    width: 75em;
+    text-align: left;
+}
+main p{
+    padding: 0 1em;
+}
+/*--------------------FOoter--------------------------------*/
+footer .EmailCount{
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer{
+    color: rgb(240, 255, 255);
+    width: 75em;
+    background-color: #313131;
+}
+footer img{
+    padding: .5em 1em;
+}

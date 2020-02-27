@@ -1,0 +1,10 @@
+.imagen-right{
+    width: 500px;
+    float: right;
+    margin: 1em;
+}
+.imagen-left{
+    width: 500px;
+    float: left;
+    margin: 1em;
+}
