@@ -1,0 +1,136 @@
+/*Metodos de preconfiguracion*/
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "roboto";
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+}
+@font-face{
+    font-family: "roboto";
+    src: url('./RobotoSlab-VariableFont_wght.ttf');
+}
+.logo{
+    width: 50px;
+}
+/*---------------header------------------------*/
+header{
+    width: 100%;
+    max-width: 80em;
+    height: 31em;
+    background-image: url('./../imagenesImportantes/city.png');
+}
+.cabezera{
+    width: 100%;
+    height: 100%;
+    color: rgb(240, 255, 255);
+    background-color: rgba(80, 74, 74, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.cabezera h1{
+    border: 0.1em solid rgb(240, 255, 255);
+    padding: .5em;
+    font-size: 3rem;
+}
+.cabezera button{
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(240, 255, 255);
+    padding: .5em;
+    background-color: transparent;
+    border: 1px solid rgb(240, 255, 255);
+}
+.cabezera button:hover{
+    color: black;
+    background-color: white;
+}
+/*-----------------------Navegacion---------------------*/
+nav{
+    width: 100%;
+    max-width: 80em;
+    background-color: rgb(124, 191, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+    font-weight: bold;
+}
+nav ul li a{
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+nav ul  li a:visited{
+    color: rgb(255, 255, 255);
+}
+nav ul li a:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+nav ul li a.selected{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+/*----------------------Main-------------------------------*/
+main{
+    flex: 1;
+    width: 100%;
+    max-width: 80em;
+    text-align: left;
+}
+main p{
+    padding: 0 1em;
+}
+
+/* ---------------image ------------------------ */
+.MainImagen{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.MainImagen img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 40em;
+}
+/*--------------------FOoter--------------------------------*/
+footer{
+    margin-top: auto;
+    width: 100%;
+    max-width: 80em;
+    color: rgb(240, 255, 255);
+    background-color: #313131;
+}
+footer .EmailCount{
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer img{
+    padding: .5em 1em;
+}

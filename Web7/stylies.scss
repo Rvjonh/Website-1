@@ -1,0 +1,179 @@
+@mixin mq ($size){
+    @media screen and (min-width:$size) {
+        @content;
+    }
+}
+:root, *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.wide-limit{
+    max-width: 80em;
+}
+
+.page-header{
+    display: block;
+    @extend .wide-limit;
+    width: 100%;
+
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.561);
+
+    div.title{
+        padding: .6em;
+        padding-right: 4em;
+
+        .slogan{
+            padding: .1em;
+
+            @media screen and (min-width:30em){
+                font-size: 1.2em;
+            }
+        }
+    }
+    @media screen and (min-width:30em) {
+        padding: .8em;
+        padding-right: 4em;
+    }
+}
+
+.menu{
+    @extend .wide-limit;
+    width: 100%;
+    margin: .2em 0;
+
+    .button-menu::after{
+        content: "\2261";
+        font-size: 4em;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: .2em;
+
+        @media screen and (min-width:30em){
+            display: none;
+        }
+    }
+    .button-menu:active{
+        color: rgb(133, 86, 25);
+    }
+    
+    .list-items{
+        display: none;
+
+        @media screen and (min-width:30em) {
+            display: block;
+        }
+    }
+    .is-open{
+        display: block;
+    }
+    .list-items ul{
+        list-style: none;
+        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+
+        li{
+            display: block;
+            width: 100%;
+            a{
+                display: block;
+                width: 100%;
+                color: rgb(255, 255, 255);
+                font-size: 1.6em;
+                font-weight: bold;
+                padding: .5em 0 .5em 1em;
+                border: 2px solid rgb(255, 255, 255);
+                text-decoration: none;
+                background-color: rgb(37, 32, 32);
+            }
+            a:active{
+                background-color: rgb(184, 118, 13);
+            }
+
+        }
+
+        @media screen and (min-width:30em){
+            display: flex;
+            align-items: flex-start;
+            justify-self: center;
+            flex-direction: row;
+
+            li a{
+                font-size: 1.2em;
+            }
+        }
+    }
+    
+}
+
+.hero{
+    @extend .wide-limit;
+    width: 100%;
+    padding: 4em 1em;
+    font-size: 1.4em;
+    color: rgb(250, 253, 255);
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(148, 98, 19);
+    // To do Recude que size of the image!
+    background-image: url("./assets/coffee-background.jpg");
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sections{
+    @extend .wide-limit;
+    width: 100%;
+
+    .row{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        .item + .item{
+            margin-top: 1em;
+        }
+
+        .item{
+            padding: 1em;
+            h2{
+                color: rgb(23, 122, 168);
+                font-size: 1.2em;
+                padding-bottom: .4em;
+            }
+        }
+
+        @media screen and (min-width:30em) {
+            flex-direction: row;
+            justify-content: center;
+            align-items:    stretch;
+
+            .item + .item{
+                margin-top: 0;
+                margin-left: 1em;
+            }
+            .item{
+                flex: 1;
+            }
+        }
+    }
+}

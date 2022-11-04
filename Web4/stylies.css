@@ -1,0 +1,567 @@
+:root, * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.borde {
+  border: 1px solid black;
+}
+
+div.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.2fr 2.5fr 1fr;
+      grid-template-columns: 1.2fr 2.5fr 1fr;
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+  -ms-grid-rows: minmax(auto, 10em) minmax(auto, 4em) auto minmax(auto, 4em);
+      grid-template-rows: minmax(auto, 10em) minmax(auto, 4em) auto minmax(auto, 4em);
+  width: 100%;
+  height: 100vh;
+  max-width: 80em;
+}
+
+@media screen and (max-width: 940px) {
+  div.container {
+    -ms-grid-columns: 1.2fr 2.5fr 1fr;
+        grid-template-columns: 1.2fr 2.5fr 1fr;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+  }
+  div.container aside.services {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  div.container div.adverticement {
+    display: none;
+  }
+  div.container main.sections {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  div.container footer.contact {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+}
+
+div.container header.header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: url("./assets/background-header.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: #b6c6b6;
+}
+
+div.container header.header h1 {
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(255, 251, 0, 0.397);
+  position: relative;
+  padding-top: 1em;
+  margin: .4em 0 0 .4em;
+}
+
+div.container header.header h1 span {
+  font-size: inherit;
+  font-family: inherit;
+  color: #fad678;
+}
+
+div.container header.header h1 img {
+  position: absolute;
+  top: .6em;
+  left: 1.4em;
+  width: 3em;
+}
+
+@media screen and (max-width: 640px) {
+  div.container header.header h1 {
+    font-size: 2em;
+  }
+  div.container header.header h1 img {
+    width: 2em;
+  }
+}
+
+div.container header.header figure {
+  width: 11em;
+  margin: 1em 0;
+  margin-left: auto;
+  margin-right: 1em;
+  border: 0.3em solid white;
+}
+
+div.container header.header figure img {
+  display: block;
+  width: 100%;
+}
+
+div.container nav.menu {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, white), color-stop(33%, #d4ac47), color-stop(65%, #fad678));
+  background-image: linear-gradient(to bottom, white 1%, #d4ac47 33%, #fad678 65%);
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+div.container nav.menu p.button-modal {
+  display: block;
+  cursor: pointer;
+  padding: .5em 0;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (min-width: 58em) {
+  div.container nav.menu p.button-modal {
+    display: none;
+  }
+}
+
+div.container nav.menu .menu-actived {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.container nav.menu ul {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(250, 213, 120, 0.801);
+  -webkit-animation: show-modal .25s 0s ease;
+          animation: show-modal .25s 0s ease;
+  padding: 6em 0;
+  font-size: 2em;
+  font-weight: bold;
+  list-style: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+div.container nav.menu ul li {
+  display: block;
+  width: 100%;
+}
+
+div.container nav.menu ul li a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.4em;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: .5em;
+  -webkit-transition: all .5s 0s ease;
+  transition: all .5s 0s ease;
+}
+
+div.container nav.menu ul li a:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #d4ac47), color-stop(78%, #fad678));
+  background-image: linear-gradient(to bottom, #d4ac47 10%, #fad678 78%);
+  color: white;
+}
+
+div.container nav.menu ul li + li {
+  margin-top: 1em;
+}
+
+div.container nav.menu ul span#button-close-menu::after {
+  content: "\00D7";
+  cursor: pointer;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  font-size: 3em;
+}
+
+div.container nav.menu ul span#button-close-menu:active {
+  color: #d4ac47;
+}
+
+@media screen and (min-width: 58em) {
+  div.container nav.menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: static;
+    padding: 0;
+    height: 100%;
+  }
+  div.container nav.menu ul li {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.container nav.menu ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding: auto;
+    font-size: 1.2em;
+  }
+  div.container nav.menu ul li + li {
+    margin-top: 0em;
+  }
+  div.container nav.menu ul #button-close-menu {
+    display: none;
+  }
+}
+
+@-webkit-keyframes show-modal {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-modal {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div.container aside.services {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+div.container aside.services h2.title-services {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  font-family: monospace;
+  text-shadow: 1px 1px 5px black;
+  padding: .2em .4em;
+  margin: .4em .1em;
+  border-radius: 20px;
+  background-color: #b6c6b6;
+}
+
+div.container aside.services section.tutorials {
+  width: 100%;
+  background-color: #beccbd;
+  margin: .5em 0em;
+  position: relative;
+}
+
+div.container aside.services section.tutorials ul {
+  list-style: none;
+  width: 100%;
+  padding: 1em 0;
+  padding-right: 2em;
+  padding-left: 1em;
+}
+
+div.container aside.services section.tutorials ul li {
+  margin-left: .6em;
+}
+
+div.container aside.services section.tutorials ul li a {
+  color: #0026ff;
+  text-decoration: none;
+}
+
+div.container aside.services section.tutorials ul li + li {
+  margin-top: .6em;
+}
+
+div.container aside.services section.tutorials img {
+  width: 6em;
+  float: right;
+  margin: .5em .5em 0 0;
+}
+
+@media screen and (max-width: 940px) {
+  div.container aside.services {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+}
+
+div.container main.sections {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  padding: 1em;
+}
+
+div.container main.sections h1.title-sections {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 1.4em;
+}
+
+div.container main.sections section.presentation {
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+
+div.container main.sections section.presentation p {
+  margin: 1em 0;
+  font-size: inherit;
+}
+
+div.container main.sections section.presentation ul li::marker {
+  color: #fad678;
+}
+
+div.container main.sections section.presentation ul li {
+  margin-left: 1.5em;
+  margin-top: 1em;
+  list-style-image: url("./assets/mouse-minilogo.png");
+}
+
+div.container main.sections section.presentation ul li a {
+  display: block;
+  width: 100%;
+  font-size: 1.2em;
+  color: #324ff6;
+  text-decoration: none;
+}
+
+div.container main.sections section.presentation img {
+  float: right;
+  width: 12em;
+  margin: 0 .2em;
+}
+
+div.container main.sections p.button-faq {
+  clear: both;
+  background-color: #fad678;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+div.container main.sections p.button-faq a {
+  display: block;
+  width: 100%;
+  padding: .5em 0;
+  text-align: center;
+  font-size: 1.8em;
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 940px) {
+  div.container main.sections {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+}
+
+div.container div.adverticement {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fad678;
+}
+
+div.container div.adverticement h2.title-section {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  padding: .4em 0;
+}
+
+div.container div.adverticement div.ad {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1em;
+}
+
+div.container div.adverticement div.ad img {
+  border: 1px solid black;
+  width: 10.55em;
+}
+
+@media screen and (max-width: 940px) {
+  div.container div.adverticement {
+    display: none;
+  }
+}
+
+div.container footer.contact {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fad678;
+  padding: 1em;
+}
+
+@media screen and (max-width: 940px) {
+  div.container footer.contact {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+}
+/*# sourceMappingURL=stylies.css.map */

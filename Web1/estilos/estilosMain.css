@@ -1,0 +1,23 @@
+.imagen-right{
+    width: 100%;
+    max-width: 40em;
+    object-fit: contain;
+
+    float: right;
+}
+.imagen-left{
+    width: 100%;
+    max-width: 40em;
+    object-fit: contain;
+
+    float: left;
+}
+
+@media screen and (min-width:35em){
+    .imagen-right{
+        margin: 0.2em;
+    }
+    .imagen-left{
+        margin: 0.2em;
+    }
+}

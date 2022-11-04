@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Great Webside</title>
+    <link rel="shortcut icon" href="imagens\icono1.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="estilos.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+    <a id="top" href="#"></a>
+    <button id="myBtn" title="Go to top">Top</button>
+    <header> 
+        <a id="linkWeb" href="https:\\www.google.com">
+            <picture id="iconWeb">
+                <img id="logo" src="imagens\icono1.png" alt="LogoWeb">
+                <h1>Web Popular</h1>
+            </picture>
+        </a>
+    </header> 
+    <nav>
+        <menu>
+            <ul>
+                <a href="#top"><li>Inicio</li></a>
+                <a href="#Noticias"><li>Noticias</li></a>
+                <a href="#Conocenos"><li>Conocenos</li></a>
+                <a href="#Contacto"><li>Contacto</li></a>
+            </ul>
+
+            <button id="MenuMovilBoton" class="menuMovil button" >Menu</button>
+            <a href="#registro"><button class="button" id="login">Registrar</button></a>
+            <button class="button" id="singin">Sign in</button>
+        </menu>
+    </nav>
+
+    <div id="MenuParaMovil">
+        <a href="#top">Inicio</a>
+        <a href="#Noticias">Noticias</a>
+        <a href="#Conocenos">Conocenos</a>
+        <a href="#Contacto">Contacto</a>
+        <p id="botonCerrarMenuMovil">X</p>
+    </div>
+
+    <div id="LoginFrame">
+        <header>
+            <img src="imagens\log-in.png" alt="Imagen de entrada">
+        </header>
+        <main>
+            <form id="formLogin"action="">
+                <Label for="username"><strong>Usuario</strong>
+                    <input type="email" name="username" id="username">
+                </Label>
+                <Label for="password"><strong>Contraseña</strong>
+                    <input type="password" name="password" id="password">
+                </Label>
+                <button class="entrar"><b>Entrar</b></button>
+                <label id="tocador" for="remember">
+                    <input type="checkbox" name="remember" id="remember">
+                    Recordar sesion
+                </label>
+            </form>
+        </main>
+        <footer class="login-footer">
+            <button id="Cancelador"><b>Cancelar</b></button>
+            <p>Olvidaste tu contraseña,<a class="link" href="">¿recuperar?</a></p>
+            <p>Registrate es Gratis<a class="link" href="">¿Gratis?, ha de ser bueno</a></p>
+        </footer>
+    </div>
+
+    <div class="content">
+
+        <aside>
+            <h2>Noticias Populares</h2>
+            <article>
+                <a href=""><h3>Tecnologia</h3><a href=""></a>
+                <a target="blank_" href="https://cnnespanol.cnn.com/cnne-underscored/2020/01/30/date-prisa-y-podras-tener-una-macbook-pro-por-menos-de-lo-que-cuesta-una-air/">
+                    <img src="noticiasimg\macpro.jpg" alt="noticia">  
+                    <p>Una Macbook Pro por menos de lo que cuesta una Air</p>
+                </a>
+        </article>
+        <article>
+            <a href=""><h3>Hogar</h3><a href=""></a>
+            <a target="blank_" href="https://cnnespanol.cnn.com/cnne-underscored/2020/02/03/este-es-el-truco-para-estar-calentito-este-invierno/">
+                <img src="noticiasimg\hogar.jpg" alt="noticia">  
+                <p>Este es el truco para estar calentito este invierno</p>
+            </a>
+        </article>
+        <article>
+            <a href=""><h3>Life-hacks</h3><a href=""></a>
+            <a target="blank_" href="https://www.cuentamealgobueno.com/2017/05/queda-atrapada-atasco-decide-practicar-yoga-mitad-la-autopista/">
+                <img src="noticiasimg\life.jpg" alt="noticia">  
+                <p>QUEDA ATRAPADA EN UN ATASCO Y DECIDE PRACTICAR YOGA EN MITAD DE LA AUTOPISTA</p>
+            </a>            
+        </article>        
+        <article>
+            <a href=""><h3>Vida sana</h3><a href=""></a>
+            <a target="blank_" href="http://www.demasiadoloco.com/toma-sopa-de-murcielago/">
+                <img src="noticiasimg\bat.jpg" alt="noticia">  
+                <p>Joven asiática toma sopa de murciélago en pleno brote coronavirus</p>
+            </a>            
+        </article>        
+        <article>
+            <a href=""><h3>Tecnologia</h3><a href=""></a>
+            <a target="blank_" href="http://www.demasiadoloco.com/empresario-da-dias-a-empleados/">
+                <img src="noticiasimg\empleados.jpeg" alt="noticia">  
+                <p>Empresario da cuatro días extra de vacaciones a los empleados que no fuman</p>
+            </a>
+        </article>
+        </aside>
+
+        <main>
+            <a id="Noticias"></a>
+            <section data-cat="Gatos">
+                <h2>Noticias</h2>
+                <article>
+                    <header class="header">
+                        <h2>How to create your portfolio website using React.js</h2>
+                    </header>
+                    <figure>
+                        <picture class="border">
+                            <img class="nada" src="imagens\slider1\1.png" alt="gatito">
+                            <img class="nada" src="imagens\slider1\2.png" alt="gatito">
+                            <img class="nada" src="imagens\slider1\3.jpg" alt="gatito">
+                        </picture>
+                        <figcaption>
+                            <h3>Portafolio web</h3>
+                            <p>After my friends canceled our weekend plans ?, I was looking for something to kill time and finally ended up with a plan to create a portfolio website after going through my long pending list of ‘Wish-To-Do’ things.</p>
+                        </figcaption>
+                    </figure>
+                    <footer>
+                        <a target="blank_" href="https://www.freecodecamp.org/news/portfolio-app-using-react-618814e35843/?fbclid=IwAR3mhLT_4tW9kng5TmkWXVm5Kj2NHq5JRsHAsNwZTklgkZXYBKwr2GSrBOg">
+                            <button class="entrar" onclick="">Ver nota</button>
+                        </a>
+                        <b><p>Comments:<span class="NumberRandom"></span></p></b>
+                        <b><time datetime="2008-02-14 20:00">Fecha<span class="NumberRandom"></span>/<span class="NumberRandom"></span>/<span class="NumberRandom"></span></time>                  </b>
+                    </footer>
+                </article>
+                <article>
+                    <header class="header">
+                        <h2>The 3 Types of Design Patterns All Developers Should Know (with code examples of each)</h2>
+                    </header>
+                    <figure>
+                        <picture class="border">
+                            <img class="nada" src="imagens\slider2\4.jpg" alt="gatito">
+                            <img class="nada" src="imagens\slider2\5.jpg" alt="gatito">
+                            <img class="nada" src="imagens\slider2\6.png" alt="gatito">
+                        </picture>
+                        <figcaption>
+                            <h3>Sameeha Rahman</h3>
+                            <p>Design patterns are design level solutions for recurring problems that we software engineers come across often. It’s not code - I repeat, ❌CODE. It is like a description on how to tackle these problems and design a solution.</p>
+                        </figcaption>
+                    </figure>
+                    <footer>
+                        <a target="blank_" href="https://www.freecodecamp.org/news/the-basic-design-patterns-all-developers-need-to-know/?fbclid=IwAR2H8fglmXzAKYi9fCjkcyFY7htSs-1DQBVrb0-ECND_nrLSmzWoilQpt4w">
+                            <button class="entrar" onclick="">Ver nota</button>
+                        </a>
+                        <b><p>Comments:<span class="NumberRandom"></span></p></b>
+                        <b><time datetime="2008-02-14 20:00">Fecha<span class="NumberRandom"></span>/<span class="NumberRandom"></span>/<span class="NumberRandom"></span></time>                  </b>
+                    </footer>
+                </article>
+                <article>
+                    <header class="header">
+                        <h2>International Day of Women and Girls in Science</h2>
+                    </header>
+                    <figure>
+                        <picture class="border">
+                            <img class="nada" src="imagens\slider3\7.jpg" alt="gatito">
+                            <img class="nada" src="imagens\slider3\8.jpg" alt="gatito">
+                            <img class="nada" src="imagens\slider3\9.jpg" alt="gatito">
+                        </picture>
+                        <figcaption>
+                            <h3>Powerful women</h3>
+                            <p>February 11 is International Day of Women and Girls in Science. We explore some of the reasons why there are fewer girls and women interested in working in science, technology, engineering and mathematics (STEM) and what's happening to encourage equality in these fields.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <footer>
+                        <a target="blank_" href="https://learnenglish.britishcouncil.org/general-english/magazine/international-day-of-women-and-girls-in-science">
+                            <button class="entrar" onclick="">Ver nota</button>
+                        </a>
+                        <b><p>Comments:<span class="NumberRandom"></span></p></b>
+                        <b><time datetime="2008-02-14 20:00">Fecha<span class="NumberRandom"></span>/<span class="NumberRandom"></span>/<span class="NumberRandom"></span></time>                  </b>
+                    </footer>
+                </article>
+            </section>
+            <div class="button entrar">Cargar mas paginas</div>
+        </main>
+
+    </div>
+
+    <a id="Conocenos"></a>
+    <div class="blockConocenos">
+
+        <h2>Video de presentacion</h2>
+
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Ycs7gq_fRcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    </div>
+
+    <a href="#registro"></a>
+    <div id="registro">
+        <div class="content">
+
+            <div id="cuadroRegistro">
+                <div>
+                    <h2>Registro de cuenta nueva</h2>
+                    <p>Formulario</p>
+                </div>
+                <br>
+                <form class="formRegistro" action="">
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="nombre" id="nombre" max="50" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="apellido">Apellido</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="apellido" id="apellido" max="50">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="cedula">Cédula</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="cedula" id="cedula" max="9" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="tel" name="telefono" id="telefono" max="11">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="correo">Correo</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" name="correo" id="correo" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div  class="col-25">
+                            <label for="clave">Clave</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="password" name="clave" id="clave" required="required">
+                        </div>
+                    </div>      
+                    <button class="entrar">Registrar</button>
+                </form>
+            </div>
+            <div class="imagen">
+                <img src="imagens\login.png" alt="Imagen de carga una nueva cuenta">
+                <p>“Solía pensar que quien era terminaba al borde de mi piel, que se me había dado este pequeño vehículo llamado cuerpo desde el que debía experimentar la creación, y aunque no podía haber pedido un modelo más deportivo, éste era después de todo un préstamo y debía ser regresado. Entonces aprendí que todo lo que hay afuera del vehículo era parte mío también y ahora conduzco como un convertible”</p>
+            </div>
+        </div>
+    </div>
+
+    <a id="Contacto"></a>
+    <div class="FormContacto">
+        <div class="backgroundfrom">
+            <h2>Información</h2>
+            <p>jonhvelasco3@gmail.com</p>
+            <p>(+57)414-1979116</p>
+        </div>
+        <div class="formContactoform">
+            <form action="">
+                <label for="Nombre">Nombres*</label>
+                <input type="text" name="Nombre" id="Nombre">
+                <label for="cel">Telefono</label>
+                <input type="tel" name="cel" id="cel">
+                <label for="Correo">Correo electronio*</label>
+                <input type="email" name="Correo" id="Correo">
+                <label for="mensaje">Mensaje*</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+                <button class="button entrar">Enviar correo</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <a href=""><img src="imagens\facebook.png" alt="link a facebook"></a>
+        <a href=""><img src="imagens\gorjeo.png" alt="link a twiter"></a>
+        <a href=""><img src="imagens\instagram.png" alt="link a instagram"></a>
+        <a href=""><img src="imagens\youtube.png" alt="link a youtube"></a>
+        <p><b>2019-2020</b></p>
+        <p>At right this second nothing</p>
+    </footer>
+</body>
+</html>

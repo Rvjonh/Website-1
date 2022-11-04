@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movil first</title>
+    <link rel="stylesheet" href="stylies.css">
+    <meta name="description" content="wombat coffee for sofistecated people around the world">
+    <link rel="shortcut icon" href="./assets/coffee-bean-icon.png" type="image/x-icon">
+
+    <script>
+        window.onload = start;
+
+        function start(){
+            let menu = document.getElementById("menu-items");
+
+            document.getElementById("button-dropdown").addEventListener("click",(event)=>{
+                event.preventDefault();
+                menu.classList.toggle("is-open");
+            })
+        }
+    </script>
+</head>
+<body>
+    <header id="header" class="page-header">
+        <div class="title">
+            <h1>WOMBAT COFFEE ROASTERS</h1>
+            <p class="slogan">We love coffee</p>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <div id="button-dropdown" class="button-menu"></div>
+        <div id="menu-items" class="list-items">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Brew</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <aside class="hero">
+        <p>Welcome to Wombat coffee Roasters! We are passionate about our carft, striving to bring you the best hand-crafted coffee in the city.</p>
+    </aside>
+
+    <main class="sections">
+        <div class="row">
+            <section class="item">
+            
+                <h2>SINGLE-ORIGIN</h2>
+                <p>We have built partnerships with small farms around the world to hand-select beans at the peak of season. We then carefully roast in small batches to maximize their potencial.</p>
+            </section>
+    
+            <section class="item">
+                <h2>BLENDS</h2>
+                <p>Our tasters have put together a selection of carefully balanced blends. Our damous house blend is available year round.</p>
+            </section>
+    
+            <section class="item">        
+                <h2>BREWING EQUIPMENT</h2>
+                <p>We offer our favorite kettles, French presses, and pour-over cones. Come to one of our brewing classes to learn how to brew the perfect pour-over cup.</p>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+/*Ejecuciones peterminadas*/
+:root{
+    --limite: 2px solid black;
+    scroll-behavior: smooth;
+    position: relative;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+/*Clase de control de imagenes*/
+.mostrar{
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    top: 20%;
+}
+button{
+    cursor: pointer;
+}
+/*--------------------Cabezera----------------------------------*/
+header{
+    width: 100%;
+    background: rgb(1,28,33);
+    background: linear-gradient(23deg, rgba(1,28,33,1) 12%, rgba(0,176,255,1) 51%, rgba(1,28,33,1) 90%);
+    background-size: 1000% 1000%;
+    animation: AnimationName 3s infinite linear;
+
+    text-align: center;
+    padding: 40px;
+    font-size: 2rem;
+}
+@keyframes AnimationName {
+    0%{background-position:0% 100%}
+    100%{background-position:93% 0%}
+}
+header a{
+    color: white;
+    display: inline-block;
+    transition: all 1s;
+}
+header a:hover{
+    text-decoration: blue underline;
+    transform: scale(1.5,1.5);
+}
+#logo{
+    transition: all 1s;
+}
+header a:hover #logo{
+    transform: rotate(180deg);
+}
+#iconWeb img{
+    width: 100px;
+    height: 100px;
+}
+/*--------------------Navegacion--------------------------------*/
+nav{
+    width: 100%;
+
+    background-color: black;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;   
+    color: white;
+    z-index: 5000;
+    font-size: 1rem;
+}
+nav menu ul{
+    width: 70%;
+    float: left;
+}
+nav menu ul li{
+    display: inline-block;
+    padding: 1em;
+    transition: all 0.5s;
+}
+nav menu ul li:hover{
+    background-color: gray;
+}
+.button{
+    background-color: rgb(56, 115, 255);
+    padding: 1.3em;
+    margin: 0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+nav #login{
+    transition: opacity 1s;
+    opacity: 0.7;
+}
+nav #login:hover{
+    opacity: 1;
+}
+button.menuMovil{
+    display: none;
+    float: left;
+}
+div#MenuParaMovil{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.445);
+    animation: MovilAnimation 0.5s;
+}
+@keyframes MovilAnimation {
+    from {
+        transform: translate(0px,-1em);
+    } 
+    50% {
+        transform: translate(0px,0.5em);
+    }
+    to{
+        transform: translate(0px,0px);
+    }
+}
+div#MenuParaMovil a{
+    margin-top: 1em;
+}
+div#MenuParaMovil p#botonCerrarMenuMovil{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/*--------------------Cuadro de Login-------------------------*/
+#LoginFrame{
+    display: none;
+    position: fixed;
+    top: 10%;
+    z-index: 9999;
+    border: 5px solid black;
+    animation: animatezoom 0.25s;
+    max-width: 30em;
+}
+@media screen and (min-width:35em){
+    #LoginFrame{
+        left: calc(50% - 15em);
+    }
+}
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+#LoginFrame *{
+    width: 100%;
+}
+.link{
+    font-weight: bold;
+    color: red;
+}
+.link:hover{
+    color: aquamarine;
+}
+#LoginFrame header img{
+    width: 30%;
+    border-bottom: 5px solid black;
+    margin-top: none;
+    transition: transform 1s;
+}
+#LoginFrame header{
+    border-bottom: 5px solid black;
+    text-align: center;
+}
+#LoginFrame header:hover img{
+    transform: scale(1.5,1.5);
+}
+#LoginFrame main{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+.entrar{
+    background-color: rgb(56, 115, 255);
+    margin-top: 1em;
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: box-shadow 1s;
+}
+.entrar:hover{
+    box-shadow: 5px 5px  black;
+}
+#LoginFrame #tocador #remember{
+    margin-top: .5em;
+    width: 10%;
+}
+#LoginFrame footer{
+    padding: 3em;
+}
+#LoginFrame footer *{
+    padding: .5em;
+}
+#Cancelador{
+    border: none;
+    background-color: red;
+    transition: box-shadow 1s;
+}
+#Cancelador:hover{
+    box-shadow: 5px 5px  black;
+}
+/* ------------------ content -------------------------- */
+div.content{
+    width: 100%;
+    max-width: 80em;
+    display: flex;
+}
+/*--------------------Main-------------------------------------*/
+main *{
+    text-align: left;
+    padding: .5em;
+}
+main{
+    flex: 1;
+}
+main section article{
+    border: 2px solid black;
+    margin-bottom: .5em;
+    transition: transform .2s ease-in 0s;
+}
+main section article:hover{
+    transform: scale(1.01);
+}
+main header{
+    background: rgb(56, 115, 255);
+    text-shadow: 3px 3px black;
+    color: white;
+}
+main figure{
+    background-color: rgb(240, 248, 255);
+}
+main picture{
+    display: flex;
+    width: 33%;
+}
+main picture img{
+    width: 100%;
+}
+main article footer{
+    display: block;
+    background: linear-gradient(45deg, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 39%, rgba(33,180,226,1) 69%, rgba(183,222,237,1) 100%);
+    color: rgb(0, 0, 0);    
+    padding: 0;
+    margin: 0;
+}
+main article footer button{
+    width: 90%;
+}
+main div.button{
+    text-align: center;
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+}
+/*--------------------Aside-------------------------------------*/
+aside{
+    width: 30%;
+    max-width: 20em;
+    float: right;
+    top: 3.5em;
+    margin: .5em;
+    padding: 1em;
+}
+aside article{
+    margin-top: 1em;
+    transition: opacity .2s ease-in 0s;
+}
+aside article:hover{
+    opacity: .7;
+}
+aside article img{
+    width: 100%;
+}
+aside article a{
+    color: #000000;
+}
+aside article a:hover{
+    color: blue;
+}
+/*-----------------------Contacto--------------------------------*/
+.blockConocenos{
+    width: 100%;
+    max-width: 80em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1em 0;
+}
+.blockConocenos .video{
+    width: 100%;
+    max-width: 35em;
+    margin: auto;
+    margin-top: 1em;
+}
+/*----------------------Registro--------------------------------*/
+div#registro{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: fixed;
+    background-image: url("background1.png");
+    background-color: #3964f1;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+#registro h2{
+    background-color: #3964f1;
+    padding: .5em;
+    margin: .5em;
+    box-shadow: 5px 5px 5px black;
+    font-size: 1.5rem;
+}
+
+#registro h2 + p{
+    display: inline;
+    background-color: #3964f1;
+    padding: .2em;
+    box-shadow: 5px 5px 5px black;
+}
+div#cuadroRegistro{
+    margin: 0.5em;
+    width: 50%;
+    height: 100%;
+}
+div#cuadroRegistro form input{
+    background-color: transparent;
+    border: 1px solid rgb(250, 248, 248);
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+div#cuadroRegistro form label{
+    display: inline-block;
+    padding: 8px;
+}
+.col-25 {
+    float: left;
+    width: 25%;
+    text-align: right;
+}
+div.row{
+    display: flex;
+}
+.col-75 {
+    flex: 1;
+    float: left;
+    width: 45%;
+    max-width: 25em;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+div.imagen{
+    width: 40%;
+    height: 100%;
+}
+div.imagen img{
+    width: 40%;
+    margin-top: 5em;
+}
+/*------------------Cuadro de contacto-----------------------*/
+.FormContacto{
+    display: flex;
+    width: 100%;
+    max-width: 80em;
+    justify-content: center;
+    text-align: center;
+    padding: 4em 0;
+    background-color: rgb(255, 255, 255);
+}
+.backgroundfrom{
+    width: 30%;
+    background-color: #3964f1;
+    color: white;
+    padding-top: 10em;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -1px 1px 10px black;
+}
+.formContactoform{
+    padding: 4em;
+    width: 60%;
+    box-shadow: 1px 1px 10px black;
+    background-color: rgb(255, 255, 255);
+}
+.formContactoform *{
+    border: none;
+    text-align: left;
+    padding: .8em;
+    width: 100%;
+}
+.formContactoform input{
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+.formContactoform #mensaje{
+    resize: vertical;
+}
+/*--------------------Footer----------------------------------*/
+footer{
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    padding: 4em;
+    background-color: #333;
+}
+footer img{
+    width: 50px;
+    margin: 1em 1em;
+    transition: filter 1s ease 0s;
+    filter: blur(1px);
+}
+footer img:hover{
+    filter: blur(0px);
+}
+/*-------------------buttonTop----------------------------*/
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #3964f1;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  #myBtn:hover {
+    background-color: #555;
+  }
+@media screen and (max-width: 600px) {
+    /*------------navegacion-----------*/
+    nav{
+        padding: 0;
+        font-size: 1em;
+    }
+    nav ul{
+        display: none;
+    }
+    button{
+        padding: 0;
+        font-size: 8px;
+    }
+    button.menuMovil{
+        display: inline-block;
+    }
+    /*----------LoginFrame------------*/
+    #LoginFrame{
+        width: 100%;
+    }
+    #LoginFrame footer{
+        padding: 1em;
+    }
+    #LoginFrame footer *{
+        padding: 0.5em;
+        font-size: .7em;
+        font-size: 1rem;
+    }
+    /*---------- main-----------------*/
+    main{
+        width: 100%;
+    }
+    main article img{
+        display: none;
+    }
+    main article picture img:nth-child(1){
+        display: flex;
+        width: 325%;
+        padding: 0;
+        margin: 0;
+    }
+    /*-----------Aside---------------*/
+    aside{
+        display: none;
+    }
+    /*-------Cuadro de contacto--------*/
+    .FormContacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(238, 234, 234);
+    }
+    .backgroundfrom{
+        width: 90%;
+        padding: 2em 0em;
+        border-radius: 10px 10px 0 0;
+    }
+    .formContactoform{
+        width: 90%;
+        margin: 0;
+        padding: .2em;
+        border-radius: 0 0 10px 10px;
+    }
+    .button{
+        font-size: 1em;
+    }
+    /*----------Registro---------------*/
+
+    div#cuadroRegistro{
+        width: 100%;
+    }
+    .col-25, .col-75, .entrar {
+      margin-top: 0;
+    }
+    .col-75{
+        padding: 4px;
+    }
+    .entrar{
+        text-align: center;
+    }
+    div.imagen{
+        display: none;
+    }
+    /*-------------footer---------------*/
+    footer img{
+        filter: blur(0px);
+    }
+    /*--------------Button---------------*/
+    #myBtn{
+        padding: 14px;
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,28 @@
+.contenedor{
+    width: 100%;
+    max-width: 80em;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+.plan{
+    width: 100%;
+    max-width: 22em;
+    margin: 0.2em;
+    border: 0.2em solid rgb(136, 187, 253);
+}
+.plan .leftAlign{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.plan .leftAlign *{
+    margin: 0;
+}
+.plan img{
+    width: 100%;
+}
